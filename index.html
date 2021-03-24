@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Hello!</title>
+    
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>  
+  <body>
+    <h1>Light and Sound Memory Game</h1>
+    
+    <p>
+      Repeat back the pattern to win the game! 3 mistakes and it's Game Over.
+    </p>
+    <button id="startBtn" onclick="startGame()">Start</button>
+    <button id="stopBtn" class="hidden" onclick="stopGame()">Stop</button>
+    
+    <div>
+      <p>
+        Time Remaining: <span id="time">20</span>      Mistakes: <span id="mistakes">0</span>
+      </p>
+    </div>
+    
+    <div id="gameButtonArea">
+    <audio src="https://cdn.glitch.com/a6d66cf8-2528-4a75-b9b2-92603efa6baf%2Fbutton1.mp3?v=1616485949362" id="audio1"></audio>
+    <button id="button1" onmousedown="startTone(1)" onmouseup="stopTone()" onclick="guess(1)"></button>
+    <audio src="https://cdn.glitch.com/a6d66cf8-2528-4a75-b9b2-92603efa6baf%2Fbutton2.mp3?v=1616486714635" id="audio2"></audio>
+    <button id="button2" onmousedown="startTone(2)" onmouseup="stopTone()" onclick="guess(2)"></button>
+    <audio src="https://cdn.glitch.com/a6d66cf8-2528-4a75-b9b2-92603efa6baf%2Fbutton3.mp3?v=1616486716506" id="audio3"></audio>
+    <button id="button3" onmousedown="startTone(3)" onmouseup="stopTone()" onclick="guess(3)"></button>
+    <audio src="https://cdn.glitch.com/a6d66cf8-2528-4a75-b9b2-92603efa6baf%2Fbutton4.mp3?v=1616486964833" id="audio4"></audio>
+    <button id="button4" onmousedown="startTone(4)" onmouseup="stopTone()" onclick="guess(4)"></button>
+    <audio src="https://cdn.glitch.com/a6d66cf8-2528-4a75-b9b2-92603efa6baf%2Fbutton5.mp3?v=1616486964464" id="audio5"></audio>
+    <button id="button5" onmousedown="startTone(5)" onmouseup="stopTone()" onclick="guess(5)"></button> 
+    <audio src="https://cdn.glitch.com/a6d66cf8-2528-4a75-b9b2-92603efa6baf%2Fbutton6.mp3?v=1616486964464" id="audio6"></audio>
+    <button id="button6" onmousedown="startTone(6)" onmouseup="stopTone()" onclick="guess(6)"></button>  
+    </div>
+
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js" defer></script>
+  </body>
+</html>
